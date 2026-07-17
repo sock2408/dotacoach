@@ -1,4 +1,4 @@
-// heroes-data.js - База знаний по всем героям Dota 2
+// heroes-data.js - База знаний по героям Dota 2
 
 const HEROES_DATABASE = {
     // Anti-Mage
@@ -9,14 +9,12 @@ const HEROES_DATABASE = {
         attackType: "melee",
         primaryAttribute: "agility",
         
-        // Нормативы фарма для этого героя
         farmBenchmarks: {
             min10: { lastHits: 50, denies: 15, netWorth: 3500 },
             min20: { lastHits: 150, netWorth: 8000, shouldHaveBattlefury: true },
             min30: { lastHits: 250, netWorth: 16000 }
         },
         
-        // Идеальная сборка предметов
         itemBuild: {
             early: ["quelling_blade", "tango", "slippers_of_agility", "circlet"],
             core: ["power_treads", "battle_fury", "manta_style"],
@@ -24,11 +22,9 @@ const HEROES_DATABASE = {
             luxury: ["satanic", "monkey_king_bar", "nullifier"]
         },
         
-        // Счётчики (герои, против которых силён)
         strongAgainst: ["medusa", "wraith_king", "storm_spirit"],
         weakAgainst: ["axe", "legion_commander", "bloodseeker", "faceless_void"],
         
-        // Советы по стадиям игры
         tips: {
             laning: [
                 "Стоять на линии до 6 уровня, потом уходить в лес",
@@ -47,7 +43,6 @@ const HEROES_DATABASE = {
             ]
         },
         
-        // Частые ошибки новичков
         commonMistakes: [
             "Слишком раннее участие в драках (до Battle Fury)",
             "Неправильное использование Blink — прыжок в 5 врагов",
@@ -55,14 +50,13 @@ const HEROES_DATABASE = {
             "Покупка Battle Fury позже 18 минуты"
         ],
         
-        // Средние показатели про-игроков (Immortal ранг)
         proStats: {
             avgGPM: 650,
             avgXPM: 750,
             avgLastHits10: 60,
             avgKDA: 4.2,
             avgWinrate: 51.5,
-            avgBattleFuryTiming: 13 // минуты
+            avgBattleFuryTiming: 13
         }
     },
     
@@ -182,8 +176,3 @@ const HEROES_DATABASE = {
         }
     }
 };
-
-// Экспорт для использования в других файлах
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = HEROES_DATABASE;
-}

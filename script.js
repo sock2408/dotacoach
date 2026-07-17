@@ -70,6 +70,7 @@ let selectedMatchIndex = 0;
 let analysisPerformed = false;
 
 // DOM элементы
+const analyzer = new DotaMatchAnalyzer();
 const analyzeBtn = document.getElementById('analyzeBtn');
 const steamInput = document.getElementById('steamIdInput');
 const loadingOverlay = document.getElementById('loadingOverlay');
